@@ -183,6 +183,7 @@ void cPvrMenuSetup::Store()
   PvrSetup.AudioSampling.value = newPvrSetup.AudioSampling.value;
   SETUPSTORE("AudioSampling", PvrSetup.AudioSampling);
 
+  // HDPVR audio encoding in setup.conf is 0..1, but driver needs 3..4
   PvrSetup.HDPVR_AudioEncoding.value = newPvrSetup.HDPVR_AudioEncoding.value + 3;
   SETUPSTORE("HDPVR_AudioEncoding", newPvrSetup.HDPVR_AudioEncoding);
 
